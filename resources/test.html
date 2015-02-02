@@ -1,0 +1,808 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Find words - Denshi Jisho</title>
+
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta name="Content-type" content="text/html; charset=utf-8" />
+	<meta name="Description" content="Powerful and easy-to-use online Japanese-English dictionary with words, kanji and example sentences." />
+
+	<link rel="search" type="application/opensearchdescription+xml" title="Denshi Jisho - J to E" href="http://jisho.org/static/files/denshijisho_je_opensearch.xml" />
+	<link rel="search" type="application/opensearchdescription+xml" title="Denshi Jisho - E to J" href="http://jisho.org/static/files/denshijisho_ej_opensearch.xml" />
+	<link rel="stylesheet" type="text/css" href="/static/styles/default.v36.css" />
+	<link rel="shortcut icon" href="/static/images/favicon.ico" />
+	<link rel="icon" href="/static/images/favicon.ico" />
+	<!-- Stuff for IE -->
+	<!--[if IE]>
+		<style>@import /static/styles/ie.v3.css;</style>
+	<![endif]-->
+
+  <script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+  </script>
+  <script type='text/javascript'>
+    GS_googleAddAdSenseService("ca-pub-2041681684284441");
+    GS_googleEnableAllServices();
+  </script>
+  <script type='text/javascript'>
+    GA_googleAddSlot("ca-pub-2041681684284441", "flutterscape_big");
+    GA_googleAddSlot("ca-pub-2041681684284441", "flutterscape_small");      GA_googleAddSlot("ca-pub-2041681684284441", "GoogleAds_234x60");        GA_googleAddSlot("ca-pub-2041681684284441", "results_area");  </script>
+  <script type='text/javascript'>
+    GA_googleFetchAds();
+  </script>
+
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-63389-1']);
+  _gaq.push(['_setDomainName', 'jisho.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+</head>
+
+<body id="page_words">
+  <div style="background: white; padding: 4px; color: #333; font-size: 11px; border-bottom: 1px solid #999;">Come try the next generation of Jisho at <a href="http://beta.jisho.org/">beta.jisho.org</a>!</div>
+
+	<div id="top"><a name="top"></a>
+		<h1 id="logo"><b>Denshi Jisho</b> <small> — Online Japanese dictionary</small></h1><div id="menu">
+	<div  ><a accesskey="h" href="/"><span class="accesskey">H</span>ome</a></div>
+	<div      class="selected"  ><a accesskey="w" href="/words/"><span class="accesskey">W</span>ords</a></div>
+	<div  ><a accesskey="k" href="/kanji/"><span class="accesskey">K</span>anji</a></div>
+	<div  ><a accesskey="r" href="/kanji/radicals/">Kanji by <span class="accesskey">r</span>adicals</a></div>
+	<div  ><a accesskey="s" href="/sentences/"><span class="accesskey">S</span>entences</a></div>
+	<div  ><a accesskey="a" class="small" href="/about/"><span class="accesskey">A</span>bout</a></div>
+	<div><a accesskey="f" class="small" href="http://forum.jisho.org/"><span class="standout"><span class="accesskey">F</span>orum</span></a></div>
+	<div  ><a accesskey="l" class="small" href="/links/"><span class="accesskey">L</span>inks</a></div>
+</div>	</div>
+<div class="search clearfix">
+		<form action="/words" method="get">
+		<div id="terms">
+			<div class="row">
+				<label for="jap_field">
+				<span class="accesskey">J</span>apanese:</label>
+				<input accesskey="j" autosave="DJWordJapHistory" value="漢字" name="jap" size="30" type="search" id="jap_field" results="10" />
+			</div>
+			<div class="row">
+				<label for="eng_field">
+				<span class="accesskey">E</span>nglish:</label>
+				<input accesskey="e" autosave="DJWordEngHistory" value="" name="eng" size="30" type="search" id="eng_field" results="10" />
+			</div>
+			<div class="row lowest_row" style="padding-left: 6.5em;">
+				<input value="Search" type="submit" />
+				<input value="Reset" type="reset" />
+			</div>
+		</div>
+		<div id="options">
+			<div class="row">
+				<label for="dict_drop">Dictionary:</label>
+				<select name="dict" id="dict_drop">
+					<option value="edict" selected="selected">General dictionary (Edict)</option>
+					<option value="compdic">Computer terms (Compdic)</option>
+					<option value="engscidic">Engineering and science terms (Engscidic)</option>
+					<option value="enamdic">Names and places (JMnedict)</option>
+				</select>
+			</div>
+			<div class="row">
+				<label for="common_check">Common words only:</label>
+				<input name="common" id="common_check" type="checkbox" />
+			</div>
+			<div class="row">
+				<label for="romaji_check">Kana as romaji:</label>
+				<input name="romaji" id="romaji_check" type="checkbox" />
+			</div>
+		</div>
+		</form>
+	</div>
+<div class="text_block_wide word_results_pagination">    <div class="result_banner">
+      <!-- ca-pub-2041681684284441/results_area -->
+      <script type='text/javascript'>
+        GA_googleFillSlot("results_area");
+      </script>
+    </div>
+  <div class="pagination">
+  <h2>
+  Found <b>19</b>  words.   </h2>
+  </div>
+</div>
+ <!-- Found words -->
+
+<div id="result">
+	<div id="result_content">
+<table border="0" id="word_result" cellspacing="0">		<tr class="odd" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149999;"><span class="match">漢字</span>				</span>
+			</td>
+			<td class="kana_column">かんじ			</td>
+			<td class="meanings_column">Chinese characters; kanji			</td>
+		</tr>
+		<tr  class="odd lower" >
+			<td colspan="2">
+				<span class="tags"><span class="common">Common word, </span><span title='n'>Noun</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字">Sentences</a></li>
+					<li><a href="/kanji/details/漢字">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="even" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149997;"><span class="match">漢字</span>音				</span>
+			</td>
+			<td class="kana_column">かんじおん			</td>
+			<td class="meanings_column">Japanese pronunciation of a kanji (based on adopted Chinese pronunciations)			</td>
+		</tr>
+		<tr  class="even lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字音">Sentences</a></li>
+					<li><a href="/kanji/details/漢字音">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字音/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字音&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字音" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字音" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字音" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%89%B9" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%89%B9&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字音" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字音" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="odd" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149995;"><span class="match">漢字</span>ＲＯＭ				</span>
+			</td>
+			<td class="kana_column">かんじロム			</td>
+			<td class="meanings_column">kanji ROM			</td>
+		</tr>
+		<tr  class="odd lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>, <span title='comp'>Computer terminology</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字ＲＯＭ">Sentences</a></li>
+					<li><a href="/kanji/details/漢字ＲＯＭ">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字ＲＯＭ/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字ＲＯＭ&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字ＲＯＭ" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字ＲＯＭ" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字ＲＯＭ" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%82q%82n%82l" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%82q%82n%82l&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字ＲＯＭ" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字ＲＯＭ" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="even" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149993;"><span class="match">漢字</span>試験				</span>
+			</td>
+			<td class="kana_column">かんじしけん			</td>
+			<td class="meanings_column">kanji test; test of kanji skills			</td>
+		</tr>
+		<tr  class="even lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字試験">Sentences</a></li>
+					<li><a href="/kanji/details/漢字試験">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字試験/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字試験&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字試験" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字試験" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字試験" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%8E%8E%8C%B1" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%8E%8E%8C%B1&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字試験" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字試験" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="odd" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149991;"><span class="match">漢字</span>文化				</span>
+			</td>
+			<td class="kana_column">かんじぶんか			</td>
+			<td class="meanings_column">(the so-called) kanji culture			</td>
+		</tr>
+		<tr  class="odd lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字文化">Sentences</a></li>
+					<li><a href="/kanji/details/漢字文化">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字文化/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字文化&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字文化" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字文化" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字文化" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%95%B6%89%BB" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%95%B6%89%BB&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字文化" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字文化" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="even" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149989;"><span class="match">漢字</span>コード				</span>
+			</td>
+			<td class="kana_column">かんじコード			</td>
+			<td class="meanings_column">kanji code			</td>
+		</tr>
+		<tr  class="even lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>, <span title='comp'>Computer terminology</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字コード">Sentences</a></li>
+					<li><a href="/kanji/details/漢字コード">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字コード/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字コード&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字コード" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字コード" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字コード" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%83R%81%5B%83h" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%83R%81%5B%83h&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字コード" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字コード" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="odd" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149987;"><span class="match">漢字</span>Ｔａｌｋ				</span>
+			</td>
+			<td class="kana_column">かんじトーク			</td>
+			<td class="meanings_column">KanjiTalk			</td>
+		</tr>
+		<tr  class="odd lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>, <span title='comp'>Computer terminology</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字Ｔａｌｋ">Sentences</a></li>
+					<li><a href="/kanji/details/漢字Ｔａｌｋ">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字Ｔａｌｋ/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字Ｔａｌｋ&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字Ｔａｌｋ" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字Ｔａｌｋ" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字Ｔａｌｋ" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%82s%82%81%82%8C%82%8B" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%82s%82%81%82%8C%82%8B&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字Ｔａｌｋ" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字Ｔａｌｋ" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="even" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149985;"><span class="match">漢字</span>検定				</span>
+			</td>
+			<td class="kana_column">かんじけんてい			</td>
+			<td class="meanings_column">test of kanji skills; kanji test			</td>
+		</tr>
+		<tr  class="even lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字検定">Sentences</a></li>
+					<li><a href="/kanji/details/漢字検定">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字検定/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字検定&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字検定" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字検定" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字検定" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%8C%9F%92%E8" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%8C%9F%92%E8&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字検定" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字検定" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="odd" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149983;"><span class="match">漢字</span>制限				</span>
+			</td>
+			<td class="kana_column">かんじせいげん			</td>
+			<td class="meanings_column">restrictions on the number of kanji recognized for usage (recognised)			</td>
+		</tr>
+		<tr  class="odd lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字制限">Sentences</a></li>
+					<li><a href="/kanji/details/漢字制限">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字制限/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字制限&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字制限" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字制限" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字制限" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%90%A7%8C%C0" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%90%A7%8C%C0&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字制限" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字制限" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="even" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149981;"><span class="match">漢字</span>対応				</span>
+			</td>
+			<td class="kana_column">かんじたいおう			</td>
+			<td class="meanings_column">kanji support			</td>
+		</tr>
+		<tr  class="even lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>, <span title='comp'>Computer terminology</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字対応">Sentences</a></li>
+					<li><a href="/kanji/details/漢字対応">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字対応/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字対応&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字対応" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字対応" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字対応" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%91%CE%89%9E" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%91%CE%89%9E&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字対応" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字対応" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="odd" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149979;"><span class="match">漢字</span>統合				</span>
+			</td>
+			<td class="kana_column">かんじとうごう			</td>
+			<td class="meanings_column">Han unification			</td>
+		</tr>
+		<tr  class="odd lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>, <span title='comp'>Computer terminology</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字統合">Sentences</a></li>
+					<li><a href="/kanji/details/漢字統合">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字統合/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字統合&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字統合" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字統合" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字統合" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%93%9D%8D%87" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%93%9D%8D%87&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字統合" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字統合" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="even" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149977;"><span class="match">漢字</span>変換				</span>
+			</td>
+			<td class="kana_column">かんじへんかん			</td>
+			<td class="meanings_column">kanji conversion			</td>
+		</tr>
+		<tr  class="even lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字変換">Sentences</a></li>
+					<li><a href="/kanji/details/漢字変換">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字変換/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字変換&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字変換" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字変換" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字変換" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%95%CF%8A%B7" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%95%CF%8A%B7&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字変換" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字変換" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="odd" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149975;"><span class="match">漢字</span>文化圏				</span>
+			</td>
+			<td class="kana_column">かんじぶんかけん			</td>
+			<td class="meanings_column">countries which use Chinese characters			</td>
+		</tr>
+		<tr  class="odd lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字文化圏">Sentences</a></li>
+					<li><a href="/kanji/details/漢字文化圏">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字文化圏/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字文化圏&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字文化圏" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字文化圏" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字文化圏" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%95%B6%89%BB%8C%97" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%95%B6%89%BB%8C%97&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字文化圏" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字文化圏" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="even" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149973;"><span class="match">漢字</span>制限論				</span>
+			</td>
+			<td class="kana_column">かんじせいげんろん			</td>
+			<td class="meanings_column">the question of limiting the use of Chinese characters			</td>
+		</tr>
+		<tr  class="even lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字制限論">Sentences</a></li>
+					<li><a href="/kanji/details/漢字制限論">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字制限論/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字制限論&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字制限論" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字制限論" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字制限論" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%90%A7%8C%C0%98_" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%90%A7%8C%C0%98_&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字制限論" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字制限論" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="odd" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149971;"><span class="match">漢字</span>ＵＲＬ				</span>
+			</td>
+			<td class="kana_column">かんじユーアールエル			</td>
+			<td class="meanings_column">kanji URL			</td>
+		</tr>
+		<tr  class="odd lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>, <span title='comp'>Computer terminology</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字ＵＲＬ">Sentences</a></li>
+					<li><a href="/kanji/details/漢字ＵＲＬ">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字ＵＲＬ/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字ＵＲＬ&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字ＵＲＬ" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字ＵＲＬ" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字ＵＲＬ" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%82t%82q%82k" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%82t%82q%82k&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字ＵＲＬ" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字ＵＲＬ" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="even" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149969;"><span class="match">漢字</span>符号化方式				</span>
+			</td>
+			<td class="kana_column">かんじふごうかほうしき			</td>
+			<td class="meanings_column">kanji encoding method			</td>
+		</tr>
+		<tr  class="even lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>, <span title='comp'>Computer terminology</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字符号化方式">Sentences</a></li>
+					<li><a href="/kanji/details/漢字符号化方式">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字符号化方式/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字符号化方式&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字符号化方式" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字符号化方式" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字符号化方式" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%95%84%8D%86%89%BB%95%FB%8E%AE" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%95%84%8D%86%89%BB%95%FB%8E%AE&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字符号化方式" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字符号化方式" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="odd" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149967;"><span class="match">漢字</span>コード化集合				</span>
+			</td>
+			<td class="kana_column">かんじコードかしゅうごう			</td>
+			<td class="meanings_column">kanji coded set			</td>
+		</tr>
+		<tr  class="odd lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>, <span title='comp'>Computer terminology</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字コード化集合">Sentences</a></li>
+					<li><a href="/kanji/details/漢字コード化集合">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字コード化集合/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字コード化集合&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字コード化集合" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字コード化集合" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字コード化集合" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%83R%81%5B%83h%89%BB%8FW%8D%87" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%83R%81%5B%83h%89%BB%8FW%8D%87&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字コード化集合" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字コード化集合" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="even" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149965;"><span class="match">漢字</span>直接入力				</span>
+			</td>
+			<td class="kana_column">かんじちょくせつにゅうりょく			</td>
+			<td class="meanings_column">direct kanji input (as opposed to kana-kanji conversion)			</td>
+		</tr>
+		<tr  class="even lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>, <span title='comp'>Computer terminology</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字直接入力">Sentences</a></li>
+					<li><a href="/kanji/details/漢字直接入力">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字直接入力/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字直接入力&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字直接入力" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字直接入力" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字直接入力" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%92%BC%90%DA%93%FC%97%CD" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%92%BC%90%DA%93%FC%97%CD&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字直接入力" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字直接入力" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>		<tr class="odd" >
+			<td class="kanji_column">
+				<span class="kanji" style="z-index: 149963;"><span class="match">漢字</span>習熟度検定				</span>
+			</td>
+			<td class="kana_column">かんじしゅうじゅくどけんてい			</td>
+			<td class="meanings_column">kanji proficiency test			</td>
+		</tr>
+		<tr  class="odd lower" >
+			<td colspan="2">
+				<span class="tags"><span title='n'>Noun</span>&nbsp;
+				</span>
+			</td>
+			<td class="links">
+				<ul class="adxm menu">
+					<li><a href="/sentences?jap=漢字習熟度検定">Sentences</a></li>
+					<li><a href="/kanji/details/漢字習熟度検定">Kanji details</a></li>
+					<li>
+						<span class="title">External links</span>
+						<ul>
+						<li><a href="http://dictionary.goo.ne.jp/srch/all/漢字習熟度検定/m0u" class="external">Goo Jisho</a></li>
+						<li><a href="http://dic.search.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字習熟度検定&amp;stype=0&amp;dtype=2" class="external">Yahoo Jisho</a></li>
+						<li><a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字習熟度検定" class="external">Google</a></li>
+						<li><a href="http://images.google.com/images?hl=en&amp;lr=&amp;sa=N&amp;tab=wi&amp;q=漢字習熟度検定" class="external">Google image search</a></li>
+						<li><a href="http://eow.alc.co.jp/漢字習熟度検定" class="external">Eijirou (ALC)</a></li>
+						<!--<li><a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%8A%BF%8E%9A%8FK%8Fn%93x%8C%9F%92%E8" class="external">JeKai</a></li>-->
+						<li><a href="http://www.jgram.org/pages/viewList.php?s=%8A%BF%8E%9A%8FK%8Fn%93x%8C%9F%92%E8&amp;search.x=16&amp;search.y=8" class="external">Jgram</a></li>
+						<li><a href="http://en.wiktionary.org/wiki/漢字習熟度検定" class="external">Wiktionary</a></li>
+						<li><a href="http://ja.wikipedia.org/wiki/漢字習熟度検定" class="external">Japanese Wikipedia</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr></table>
+</div>
+</div>
+ <!-- Found no words -->
+
+<div class="text_block" id="suggest_box">    <h2>You can also</h2>		<p>
+			Look up <a href="/kanji/details/漢字"><b>kanji details</b> for 漢字</a>.
+		</p>
+	<p>
+		Try a <a href="http://dic.yahoo.co.jp/search?ei=UTF-8&fr=dic&stype=prefix&p=漢字+&amp;stype=0&amp;dtype=2" class="external"><b>Yahoo Jisho</b> search for 漢字 </a>.<br/>
+
+		Try a <a href="http://dictionary.goo.ne.jp/srch/all/漢字+/m0u" class="external"><b>Goo Jisho</b> search for 漢字 </a>.<br/>
+
+		<!--Try a <a href="http://www.jekai.org/cgi-jekai/siteindex/jsearch.pl?Q=%B4%C1%BB%FA+" class="external"><b>JeKai</b> search for 漢字 </a>.<br/>-->
+
+		Try a <a href="http://www.google.com/search?ie=utf8&amp;oe=utf8&amp;lr=lang_ja&amp;q=漢字+" class="external"><b>Google</b> search for 漢字 </a>.<br/>
+	</p>
+</div>
+
+	<div id="important_notice">
+		<div class="ads">
+      <!-- ca-pub-2041681684284441/flutterscape_big -->
+      <script type='text/javascript'>
+        GA_googleFillSlot("flutterscape_big");
+      </script>
+    </div>
+
+    <div id="menu_ad">
+      <!-- ca-pub-2041681684284441/flutterscape_small -->
+      <script type='text/javascript'>
+        GA_googleFillSlot("flutterscape_small");
+      </script>
+    </div>
+      <div id="green_area_ad">
+        <!-- ca-pub-2041681684284441/GoogleAds_234x60 -->
+        <script type='text/javascript'>
+          GA_googleFillSlot("GoogleAds_234x60");
+        </script>
+      </div>
+		<div class="message">
+		</div>
+	</div>
+		<div id="copyright">
+			<div class="author">
+				<p>
+					Denshi Jisho by <a href="mailto:kim.ahlstrom@gmail.com">Kim Ahlström</a>.<br />
+          Please <a href="/about#donations">Donate</a> to Denshi Jisho.<br/>
+			    <a href="http://jisho.wordpress.com/">The Denshi Jisho Blog</a>
+				</p>
+			</div>
+			<div class="files">
+				<p>
+					Denshi Jisho uses the <a href="http://www.csse.monash.edu.au/~jwb/edict.html">Edict</a> and <a href="http://www.csse.monash.edu.au/~jwb/kanjidic2/index.html">Kanjidic2</a> dictionaries, provided by the <a href="http://www.edrdg.org/edrdg/licence.html">Electronic Dictionary Research and Development Group</a>.
+
+					Please see the <a href="/about#files">data and copyright information</a> for more details.
+	   			</p>
+			</div>
+			<div class="general">
+				<p>
+					ASCII safe link to this page: http://jisho.org/words?jap=%E6%BC%A2%E5%AD%97&eng=&dict=edict				</p>
+			</div>
+		</div>
+		<script type="text/javascript" charset="utf-8">
+		// <![CDATA[
+
+			var section = "words";
+			var is_ie = 0;
+		// ]]>
+		</script>
+
+		<!-- Stuff for IE -->
+		<!--[if IE]>
+			<script type="text/javascript" charset="utf-8" src="/static/js/ADxMenu.v1.js"></script>
+			<script type="text/javascript" language="javascript" charset="utf-8">
+				var is_ie = 1;
+			</script>
+		<![endif]-->
+
+		<script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/static/js/jisho.v9.js"></script>
+	</body>
+</html>
